@@ -21,7 +21,7 @@
 let km = prompt("Inserire km");
 let eta = prompt("Inserire età");
 
-let prezzoIntero = 0.21 * km;
+let prezzoIntero = (0.21 * km);
 
 let sconto20 = (prezzoIntero * 0.20); 
 let sconto40 = (prezzoIntero * 0.40);
