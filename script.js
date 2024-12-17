@@ -6,9 +6,11 @@
 - va applicato uno sconto del 40% per gli over 65.
 - L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca. */
 
-//Input:
+//LOGICA
+
+// Input:
 // Il programma chiede i km
-// Il programma l'età
+// Il programma chiede l'età
 
 //Calcolo del prezzo:
 // Prezzo al km
@@ -35,11 +37,11 @@ if (eta < 18) {
     prezzoFinale = prezzoMinorenni; 
 }
 
-else if (eta >= 18 && eta < 65) {
+else if (eta >= 18 && eta <= 65) {
     prezzoFinale = prezzoIntero;
 }
     
-else if (eta >= 65) {
+else if (eta > 65) {
     prezzoFinale = prezzoOver65;
 }
 
