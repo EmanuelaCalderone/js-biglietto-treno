@@ -17,3 +17,31 @@
 
 //Output:
 // prezzo finale con due decimali (toFixed(2))
+
+let km = prompt("Inserire km");
+let eta = prompt("Inserire età");
+
+let prezzoIntero = 0.21 * km;
+
+let sconto20 = (prezzoIntero * 0.20); 
+let sconto40 = (prezzoIntero * 0.40);
+
+let prezzoMinorenni = (prezzoIntero - sconto20);
+let prezzoOver65 = (prezzoIntero - sconto40);
+
+let prezzoFinale;
+
+if (eta < 18) {
+    prezzoFinale = prezzoMinorenni; 
+}
+
+else if (eta >= 18 && eta < 65) {
+    prezzoFinale = prezzoIntero;
+}
+    
+else if (eta >= 65) {
+    prezzoFinale = prezzoOver65;
+}
+
+console.log("Il prezzo del tuo biglietto è di: € " + prezzoFinale.toFixed(2));
+
