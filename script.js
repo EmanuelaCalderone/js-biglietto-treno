@@ -20,10 +20,9 @@
 //Output:
 // prezzo finale con due decimali (toFixed(2))
 
-let km = prompt("Inserire km");
-let eta = prompt("Inserire età");
-
-let prezzoIntero = (0.21 * km);
+/* const km = parseInt(prompt("Inserire km"));
+const eta = parseInt(prompt("Inserire età"));
+const prezzoIntero = (0.21 * km);
 
 let sconto20 = (prezzoIntero * 0.20); 
 let sconto40 = (prezzoIntero * 0.40);
@@ -45,5 +44,25 @@ else if (eta > 65) {
     prezzoFinale = prezzoOver65;
 }
 
-console.log("Il prezzo del tuo biglietto è di: € " + prezzoFinale.toFixed(2));
+console.log("Il prezzo del tuo biglietto è di: € " + prezzoFinale.toFixed(2)); */
+
+/*_____OTTIMIZZATO_____*/
+
+const km = parseInt(prompt("Inserire km"));
+const eta = parseInt(prompt("Inserire età"));
+let prezzo = (0.21 * km);
+
+if (eta < 18) {
+    prezzo = prezzo - (prezzo * 0.2); 
+}
+
+else if (eta >= 18 && eta <= 65) {
+    prezzo = prezzo;
+}
+    
+else {
+    prezzo = prezzo - (prezzo * 0.4); 
+}
+
+console.log("Il prezzo del tuo biglietto è di: € " + prezzo.toFixed(2));
 
