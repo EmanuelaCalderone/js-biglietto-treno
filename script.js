@@ -56,12 +56,8 @@ if (eta < 18) {
     prezzo = prezzo - (prezzo * 0.2); 
 }
 
-else if (eta >= 18 && eta <= 65) {
-    prezzo = prezzo;
-}
-    
-else {
-    prezzo = prezzo - (prezzo * 0.4); 
+else if (eta > 65) {
+    prezzo = prezzo - (prezzo * 0.4);
 }
 
 console.log("Il prezzo del tuo biglietto è di: € " + prezzo.toFixed(2));
